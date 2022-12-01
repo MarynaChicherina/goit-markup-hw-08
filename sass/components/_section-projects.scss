@@ -1,0 +1,7 @@
+.section-projects {
+    @include padding();
+
+    @media screen and (min-width: 1200px) {
+        @include paddings();   
+    }
+}

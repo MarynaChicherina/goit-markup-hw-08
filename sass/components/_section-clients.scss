@@ -1,0 +1,68 @@
+.section-clients {
+    @include padding();
+
+    @media screen and (min-width: 1200px) {
+        @include paddings();   
+    }
+
+    &__title--big {
+        margin-bottom: 50px;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: 1199px) {
+            font-size: 28px;
+            line-height: 1.18;    
+    }
+    }
+}
+.clients {
+    @extend %list;
+    display: flex;
+
+    @media screen and (max-width: 1199px) {
+        flex-wrap: wrap;
+    }
+
+    &__icon {
+        background-position: center;
+        fill: currentColor;  
+    }
+    margin-left: calc(-1 * $gallery-gap );
+    margin-top: calc(-1 * $gallery-gap );
+}
+.clients__item {
+    @media screen and (max-width: 767px) {
+        flex-basis: calc(100%/2 - $gallery-gap);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-basis: calc(100%/3 - $gallery-gap);
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(100%/6 - $gallery-gap);
+    }
+    margin-left: $gallery-gap;
+    margin-top: $gallery-gap;
+}
+
+.clients__link {
+    @include centeredFlex();
+    height: 92px;
+    border-radius: 4px; 
+    cursor: pointer;
+ 
+    border: 1px solid $icon-color-primary;
+    background-color: $primary-white-color;
+    color: $icon-color-primary;
+ 
+    transition: background-color 250ms $animation-function,
+    color 250ms $animation-function, border-color 250ms $animation-function;
+ 
+    &:hover, &:focus {
+    border-color: $accent-color;
+    background-color: $primary-white-color;
+    color: $accent-color;
+    }
+}

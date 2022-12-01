@@ -1,0 +1,65 @@
+.project {
+    @extend %link;
+
+    &__thumb {
+        position: relative;
+        overflow: hidden;
+    }
+    &__overlay-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 322px;
+        height: 168px;    
+    
+        font-size: 18px;
+        line-height: 1.55;
+        color: $primary-white-color;
+    }
+    &__meta {
+        padding: 20px 24px;
+        border-bottom: 1px solid #EEEEEE;
+        border-left: 1px solid #EEEEEE;
+        border-right: 1px solid #EEEEEE;
+
+        &--first {
+            @media screen and (min-width: 768px) and (max-width: 1199px) {
+                padding-bottom: 56px;
+            }
+        }
+
+    }
+    &__name {
+        margin-bottom: 4px;
+      
+        color: $title-text-color;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em; 
+    }
+    &__content {
+        font-size: 16px;
+        line-height: 1.88;
+        color: $primary-text-color;
+        
+}
+}
+.project__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;   
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms $animation-function,
+    opacity 250ms $animation-function;
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    .project:hover & {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

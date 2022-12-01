@@ -1,0 +1,28 @@
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    border: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    list-style: none;
+
+    &--primary {
+        background-color: $accent-color;
+        color: $primary-white-color;
+        transition: box-shadow 250ms $animation-function;
+    }
+    &--secondary {
+        background-color: $bg-color-section;
+        color: $title-text-color;
+    
+        transition: background-color 250ms $animation-function,
+        color 250ms $animation-function, 
+        box-shadow 250ms $animation-function;
+
+        &:hover {
+            background-color: $accent-color;
+            color: $primary-white-color;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.project-gallery {
+    @extend %list;
+    @extend %wrap;
+   
+    margin-left: calc(-1 * $gallery-gap );
+    margin-top: calc(-1 * $gallery-gap );
+}
+.project-gallery__item {
+    
+    transition: box-shadow 250ms $animation-function;
+
+
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    @media screen and (min-width: 768px) {
+        flex-basis: calc(100%/2 - $gallery-gap);
+        margin-left: $gallery-gap;
+        margin-top: $gallery-gap;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-basis: calc(100%/3 - $gallery-gap);
+    }
+    @media screen and (max-width: 767px) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+

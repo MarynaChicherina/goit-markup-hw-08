@@ -1,0 +1,23 @@
+.footer-nav {
+   @extend %list;
+
+   &__item {
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+}
+.footer-nav__link {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.6);
+    @extend %link;
+    font-size: 14px;
+    line-height: 2;
+    font-style: normal;
+
+    transition: color 250ms $animation-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
