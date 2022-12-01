@@ -1,0 +1,57 @@
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;    
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    display: flex;
+    justify-content: flex-end;
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+     
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
+
+
+    background-color: $primary-white-color;
+    transition: transform 250ms $animation-function;
+    z-index: 3;
+
+    .is-hidden & {
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+    &__icon {
+        fill: currentColor;
+        width: 18px;
+        height: 18px;
+    }
+}
+.modal__button-modal {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    @include centeredFlex();
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 4;
+
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: $primary-white-color;
+    transition: color 250ms $animation-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
+
+
