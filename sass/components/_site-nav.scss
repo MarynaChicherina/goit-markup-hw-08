@@ -1,0 +1,38 @@
+.site-nav {
+    @extend %list;
+    display: flex;
+    margin-bottom: 0;
+    margin-left: auto;
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    &__icon {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+    
+        fill: currentColor; 
+    }        
+}
+.site-nav__link {
+    @include centeredFlex();
+    @extend %link;
+    cursor: pointer;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em; 
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: $animation-function;
+
+    &:hover, &:focus {
+        color: $accent-color;
+    }
+}
