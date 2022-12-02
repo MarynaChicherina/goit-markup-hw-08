@@ -1,17 +1,28 @@
 .site-nav {
     @extend %list;
-    display: flex;
-    margin-bottom: 0;
     margin-left: auto;
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
+    @media screen and (max-width: 767px) {
+        display: none;
     }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+
+        &__item:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
     &__icon {
-        width: 16px;
-        height: 16px;
-        margin-right: 10px;
-    
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+
+        @media screen and (min-width: 1200px){
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+        } 
         fill: currentColor; 
     }        
 }
@@ -19,14 +30,29 @@
     @include centeredFlex();
     @extend %link;
     cursor: pointer;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
+    @media screen and (max-width: 1199px) {
+        justify-content: flex-start;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
     
     color: $primary-text-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em; 
+    letter-spacing: 0.02em;        
+    font-size: 12px;
+    line-height: 1.16; 
+
+    @media screen and (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
+
+
 
     transition-property: color;
     transition-duration: 250ms;

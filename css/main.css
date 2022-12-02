@@ -439,6 +439,16 @@ h1, h2, h3, p, strong {
           align-items: center;
   margin-left: 93px;
 }
+@media screen and (max-width: 767px) {
+  .main-nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .main-nav {
+    margin-left: 88px;
+  }
+}
 .main-nav__item:not(:last-child) {
   margin-right: 50px;
 }
@@ -480,20 +490,35 @@ h1, h2, h3, p, strong {
 }
 
 .site-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0;
   margin-left: auto;
 }
-.site-nav__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .site-nav__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .site-nav__icon {
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
   fill: currentColor;
+}
+@media screen and (min-width: 1200px) {
+  .site-nav__icon {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .site-nav__link {
@@ -507,19 +532,38 @@ h1, h2, h3, p, strong {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-  padding-top: 32px;
-  padding-bottom: 32px;
   color: #757575;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
+  font-size: 12px;
+  line-height: 1.16;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (max-width: 1199px) {
+  .site-nav__link {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .site-nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .site-nav__link:hover, .site-nav__link:focus {
   color: #2196F3;
