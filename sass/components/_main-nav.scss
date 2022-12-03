@@ -40,7 +40,8 @@
     &::after {
         position: absolute;
         left: 0;
-        bottom: -1px;
+        bottom: 0;
+        z-index: 2;
     
         content: "";
         display: block;

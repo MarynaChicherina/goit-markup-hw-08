@@ -22,7 +22,7 @@
 
     background-color: $primary-white-color;
     transition: transform 250ms $animation-function;
-    z-index: 3;
+    z-index: 4;
 
     .is-hidden & {
         transform: translate(-50%, -50%) scale(0.7);
@@ -42,7 +42,7 @@
     height: 30px;
     padding: 0;
     cursor: pointer;
-    z-index: 4;
+    z-index: 5;
 
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);

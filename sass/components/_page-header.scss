@@ -1,12 +1,24 @@
 .page-header {
-    border-bottom: 1px solid #ECECEC;  
+    border-bottom: 1px solid #ECECEC; 
+
+
     
     &__container {
         display: flex;
         align-items: center;
+        height: 80px;
+        @media screen and (max-width: 767px) {
+            height: 60px;  
+            justify-content: flex-start;
+        }
     }
     &__nav {
         display: flex;
         align-items: center;
+        @media screen and (max-width: 767px) {
+            width: 100%;
+        }
+    
     }
+    
 }
