@@ -1149,7 +1149,7 @@ h1, h2, h3, p, strong {
   fill: #2196F3;
   border-radius: 2px;
   background-color: #2196F3;
-  background-image: url(/images/icon\ check.svg);
+  background-image: url(/images/icon-check.svg);
   background-size: contain;
   background-origin: border-box;
 }
