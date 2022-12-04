@@ -499,7 +499,7 @@ h1, h2, h3, p, strong {
 .main-nav__link--current::after {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   z-index: 2;
   content: "";
   display: block;
