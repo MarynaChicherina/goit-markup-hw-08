@@ -300,6 +300,7 @@ body {
   color: #757575;
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+  overflow-x: hidden;
 }
 
 img {
@@ -313,7 +314,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 @media screen and (min-width: 480px) {
   .container {
