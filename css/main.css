@@ -1354,11 +1354,6 @@ h1, h2, h3, p, strong {
 .section-team__title--big {
   margin-bottom: 50px;
 }
-@media screen and (max-width: 767px) {
-  .section-team__title--big {
-    margin-bottom: 30px;
-  }
-}
 @media screen and (max-width: 1199px) {
   .section-team__title--big {
     font-size: 28px;
