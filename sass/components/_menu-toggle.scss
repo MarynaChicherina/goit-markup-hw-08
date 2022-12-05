@@ -57,7 +57,7 @@
   .mobile-menu {
     @extend %list;
 
-    &__link {
+  &__link {
         @extend %link;
         display: block;
         color: $primary-black-color;
@@ -73,6 +73,9 @@
         transition-timing-function: $animation-function;
     
         &:hover, &:focus {
+            color: $accent-color;
+        }
+        &--current {
             color: $accent-color;
         }
   }
@@ -136,8 +139,9 @@
     
         &:hover, &:focus {
             color: $accent-color;
-        }
+        }        
 }
+
 
 
 
