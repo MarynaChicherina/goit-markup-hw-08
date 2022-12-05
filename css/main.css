@@ -301,16 +301,6 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
 }
-@media screen and (min-width: 480px) {
-  body {
-    overflow-y: scroll;
-  }
-}
-@media screen and (max-width: 479px) {
-  body {
-    overflow-x: scroll;
-  }
-}
 
 img {
   display: block;
@@ -642,6 +632,11 @@ h1, h2, h3, p, strong {
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+@media screen and (max-width: 479px) {
+  .menu-container {
+    overflow-x: scroll;
+  }
 }
 .menu-container.is-open {
   -webkit-transform: translateX(0);
@@ -1613,6 +1608,12 @@ h1, h2, h3, p, strong {
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
+}
+
+@media screen and (max-width: 479px) {
+  .page-footer__container .page-footer__form {
+    width: 100%;
+  }
 }
 
 .footer-nav__item {

@@ -47,6 +47,7 @@
       
     }
     &__form {
+
         @media screen and (max-width: 1199px){
             width: 450px;
             margin: 60px auto 0px;
@@ -78,4 +79,8 @@
         line-height: 1.14;
     }
 }
-
+.page-footer__container .page-footer__form {
+    @media screen and (max-width: 479px) {
+        width: 100%;
+    }
+}
