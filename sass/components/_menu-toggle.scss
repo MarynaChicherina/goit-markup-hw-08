@@ -97,7 +97,7 @@
     
         transition: color 250ms $animation-function;
     
-        &:hover, &:focus {
+        &--big {
             color: $accent-color;
             font-size: 34px;
             line-height: 1.17;
@@ -130,18 +130,12 @@
         @extend %link;
         display: inline-block;
         width: 100%;
-        color: $primary-text-color;
         font-weight: 500;
         font-size: 18px;
         line-height: 1.22;
         font-style: normal;
-        
-    
-        transition: color 250ms $animation-function;
-    
-        &:hover, &:focus {
-            color: $accent-color;
-        }        
+        color: $accent-color;
+      
 }
 
 
